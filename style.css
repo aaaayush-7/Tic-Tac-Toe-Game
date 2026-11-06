@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(135deg, rgb(32, 27, 43), rgb(35, 92, 80));
+}
+
+header {
+    margin-top: clamp(30px, 5vw, 60px);
+    padding: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    color: rgb(255, 231, 200);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(130, 255, 240);
+}
+
+.container {
+    margin: clamp(15px, 3vw, 30px);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 2px;
+}
+
+.container div {
+    border: 2px solid rgba(255, 255, 255, 0.248);
+    height: 100px;
+    width: 100px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: rgb(130, 255, 240);
+    user-select: none;
+}
+
+.container div:hover {
+    border: 2px solid rgba(255, 255, 255, 0.441);
+}
+
+.container div.x {
+    color: #ff5a5a;
+}
+
+#resetBtn {
+    padding: 10px;
+    font-size: 2rem;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.251);
+    border-radius: 10px;
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+#resetBtn:hover {
+    border: 2px solid rgba(255, 255, 255, 0.507);
+    color: rgb(247, 222, 189);
+}
+
+.highlight {
+    border: 2px solid rgba(51, 190, 111, 0.718) !important;
+}
+
+@media (max-width: 350px) {
+    .container {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .container div {
+        width: 70px;
+        height: 70px;
+    }
+}
